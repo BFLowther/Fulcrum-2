@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: 0af07caf4dfe7a0418c415225de5be46
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bush
+    100002: Fountain
+    100004: ParkBench
+    100006: //RootNode
+    100008: PicnicTable
+    100010: Tree01
+    100012: Tree02
+    100014: Tree03
+    100016: Tree04
+    400000: Bush
+    400002: Fountain
+    400004: ParkBench
+    400006: //RootNode
+    400008: PicnicTable
+    400010: Tree01
+    400012: Tree02
+    400014: Tree03
+    400016: Tree04
+    2100000: Bark
+    2100002: Leaf
+    2100004: Flower
+    2100006: Concrete
+    2100008: Water
+    2100010: Wood
+    2100012: Metal
+    2300000: Bush
+    2300002: Fountain
+    2300004: ParkBench
+    2300006: PicnicTable
+    2300008: Tree01
+    2300010: Tree02
+    2300012: Tree03
+    2300014: Tree04
+    3300000: Bush
+    3300002: Fountain
+    3300004: ParkBench
+    3300006: PicnicTable
+    3300008: Tree01
+    3300010: Tree02
+    3300012: Tree03
+    3300014: Tree04
+    4300000: Tree04
+    4300002: Bush
+    4300004: Fountain
+    4300006: PicnicTable
+    4300008: ParkBench
+    4300010: Tree01
+    4300012: Tree02
+    4300014: Tree03
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bark
+    second: {fileID: 2100000, guid: 98988a3f06fe9054fb95dad4c15b6fa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete
+    second: {fileID: 2100000, guid: f64fe3236efac6b44bb325ffd31a5c91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flower
+    second: {fileID: 2100000, guid: 3dbb3742ed3834046b3caf6c0b75a819, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf
+    second: {fileID: 2100000, guid: e0e406d3599713a48abff46c3bb021f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 84a0425fd1eb8b7429fb799f88ed7bc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Water
+    second: {fileID: 2100000, guid: 3aad1a1beda0bd24b86b058827685180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 0fc309c879a1c434eae3f75cce2e1e6b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
