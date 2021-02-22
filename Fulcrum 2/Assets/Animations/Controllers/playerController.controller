@@ -58,7 +58,7 @@ AnimatorStateMachine:
     m_Position: {x: 350, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 923170834424278964}
-    m_Position: {x: 350, y: 390, z: 0}
+    m_Position: {x: 350, y: 410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2883320896633659493}
     m_Position: {x: 350, y: 140, z: 0}
@@ -179,7 +179,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: playerControler
+  m_Name: playerController
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
