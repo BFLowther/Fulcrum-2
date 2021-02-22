@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: 9ab2309fd06fcd648a696aba6e2954d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2661611575569921461
+    second: horse idle_0
+  - first:
+      213: -4892713996920625082
+    second: horse idle_1
+  - first:
+      213: -1978445851677626147
+    second: horse idle_2
+  - first:
+      213: -2376288452622356542
+    second: horse idle_3
+  - first:
+      213: 1331707288519770958
+    second: horse idle_4
+  - first:
+      213: -8197331045607385515
+    second: horse idle_5
+  - first:
+      213: -316851676782391224
+    second: horse idle_6
+  - first:
+      213: 272414534100569538
+    second: horse idle_7
+  - first:
+      213: -3061284746506078570
+    second: horse idle_8
+  - first:
+      213: -7151798858773187697
+    second: horse idle_9
+  - first:
+      213: 1616648148142520919
+    second: horse idle_10
+  - first:
+      213: -626200093081590997
+    second: horse idle_11
+  - first:
+      213: -2954158786676064271
+    second: horse idle_12
+  - first:
+      213: 4775117587520957740
+    second: horse idle_13
+  - first:
+      213: 3611435725024013236
+    second: horse idle_14
+  - first:
+      213: -6601939468803108977
+    second: horse idle_15
+  - first:
+      213: -5378360154889480516
+    second: horse idle_16
+  - first:
+      213: -991655261069589595
+    second: horse idle_17
+  - first:
+      213: -4722028618949046348
+    second: horse idle_18
+  - first:
+      213: -5981647099094711068
+    second: horse idle_19
+  - first:
+      213: -2117045388267096081
+    second: horse idle_20
+  - first:
+      213: 2389237260983276676
+    second: horse idle_21
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: horse idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 476
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5b9eb40a1ffe420800000000000000
+      internalID: 2661611575569921461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: horse idle_1
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 2
+        width: 480
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648e6f1ea86991cb0800000000000000
+      internalID: -4892713996920625082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: horse idle_2
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 2
+        width: 480
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0f86beaf52b84e0800000000000000
+      internalID: -1978445851677626147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: horse idle_3
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 2
+        width: 478
+        height: 510
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfe4911e3ab50fd0800000000000000
+      internalID: -2376288452622356542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e06dcdfa34415c840a1f00041202109e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

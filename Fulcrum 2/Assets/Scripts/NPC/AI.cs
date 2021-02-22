@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 enum AiState
 {
@@ -16,12 +17,24 @@ public class AI : MonoBehaviour
 
     Transform lastKnownPlayerLocation;
 
+    public float seeHearRange = 10f;
     bool canSeeHear = false;
     AiState aiState = AiState.idle;
-    
+
+    public float shootFromRange = 5f;
+    bool inRange = false;
+
+    NavMeshAgent meshAgent;
+
+    private void Start()
+    {
+        meshAgent = GetComponent<NavMeshAgent>();
+    }
 
     void Update()
     {
+        CheckSenses();
+
         if (canSeeHear)
             SeeHear();
 
@@ -38,9 +51,18 @@ public class AI : MonoBehaviour
             Hunting();
     }
 
+    void CheckSenses()
+    {
+        if(Vector3.Distance(gameObject.transform.position, playersTransform.position) < seeHearRange)
+        {
+            canSeeHear = true;
+        }
+    }
+
     void SeeHear()
     {
-
+        lastKnownPlayerLocation = playersTransform;
+        aiState = AiState.hunting;
     }
 
     void Idle()
@@ -60,6 +82,20 @@ public class AI : MonoBehaviour
 
     void Hunting()
     {
+        if (Vector3.Distance(gameObject.transform.position, playersTransform.position) < shootFromRange)
+            inRange = true;
+        else
+            inRange = false;
 
+        if (inRange)
+            meshAgent.destination = gameObject.transform.position;
+        else
+        {
+            meshAgent.destination = lastKnownPlayerLocation.position;
+            if (Vector3.Distance(gameObject.transform.position, lastKnownPlayerLocation.position) < 1)
+                aiState = AiState.idle;
+        }
+
+        
     }
 }
