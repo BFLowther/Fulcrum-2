@@ -3,34 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-enum AiState
+public enum AiState
 {
+    idle,
     wandering,
     potroling,
-    idle,
     hunting
 }
 
 public class AI : MonoBehaviour
 {
+    [Header("Player Prefab")]
     public Transform playersTransform;
 
-    Vector3 lastKnownPlayerLocation;
+    [Header("AI State Settings")]
+    public AiState defaultAiState = AiState.idle;
 
-    //Transform lastKnownPlayerLocation;
+    [Header("Potrol/Waiting Settings")]
+    public List<Vector3> movementPoints;
+    public float potrolWaitTime = 5f;
+    public float potrolSeeHearRangePenalty = .66f;
+    public float wanderingSeeHearRangePenalty = .75f;
 
+    [Header("AI Ranges")]
     public float seeHearRange = 10f;
-    private bool canSeeHear = false;
-    private AiState aiState = AiState.idle;
-
     public float shootFromRange = 5f;
+
+    private bool canSeeHear = false;
     private bool inRange = false;
+    private AiState aiState = AiState.idle;
+    private AiState lastAiState = AiState.idle;
+    private bool still = false;
+    private int currentMovementPoint = 0;
+    private float potrolWaitTimeCounter;
+    private float seeHearRangeBackup;
 
     private NavMeshAgent meshAgent;
+
+    Vector3 lastKnownPlayerLocation;
 
     private void Start()
     {
         meshAgent = GetComponent<NavMeshAgent>();
+        potrolWaitTimeCounter = potrolWaitTime;
+        seeHearRangeBackup = seeHearRange;
     }
 
     void Update()
@@ -72,21 +88,46 @@ public class AI : MonoBehaviour
 
     void Idle()
     {
-
+        aiState = defaultAiState;
     }
 
     void Wandering()
     {
-        
+        if (seeHearRange == seeHearRangeBackup)
+            seeHearRange = seeHearRange * .75f;
+
+        meshAgent.autoBraking = false;
+        if (!meshAgent.pathPending && meshAgent.remainingDistance < .5f)
+                GoToNextPoint();
+
+        lastAiState = AiState.wandering;
     }
 
     void Potroling()
     {
+        if (seeHearRange == seeHearRangeBackup && !(still))
+            seeHearRange = seeHearRange * .66f;
 
+        meshAgent.autoBraking = true;
+        if(!meshAgent.pathPending && meshAgent.remainingDistance < .5f)
+        {
+            seeHearRange = seeHearRangeBackup;
+            still = true;
+
+            potrolWaitTimeCounter -= Time.deltaTime;
+            if (potrolWaitTimeCounter <= 0f)
+            {
+                GoToNextPoint();
+                still = false;
+            }
+        }
+
+        lastAiState = AiState.potroling;
     }
 
     void Hunting()
     {
+        seeHearRange = seeHearRangeBackup;
         if (Vector3.Distance(transform.position, playersTransform.position) < shootFromRange)
             inRange = true;
         else
@@ -97,14 +138,33 @@ public class AI : MonoBehaviour
         else
         {
             meshAgent.destination = lastKnownPlayerLocation;
-            if (Vector3.Distance(transform.position, lastKnownPlayerLocation) < 1f)
+            if (meshAgent.remainingDistance < .5f)
                 aiState = AiState.idle;
         }
 
-        
+        lastAiState = AiState.hunting;
+    }
+
+    void GoToNextPoint()
+    {
+        if (movementPoints.Count == 0)
+            return;
+
+        meshAgent.destination = movementPoints[currentMovementPoint];
+
+        currentMovementPoint = (currentMovementPoint + 1) % movementPoints.Count;
+
+        potrolWaitTimeCounter = potrolWaitTime;
     }
 
     private void OnDrawGizmos()
+    {
+        AiGizmos();
+
+        MovementPointGizmos();
+    }
+
+    void AiGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, seeHearRange);
@@ -112,5 +172,29 @@ public class AI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, shootFromRange);
         Gizmos.color = Color.white;
         Gizmos.DrawLine(transform.position, meshAgent.destination);
+    }
+
+    void MovementPointGizmos()
+    {
+        Gizmos.color = Color.magenta;
+        if (movementPoints.Count > 0)
+        {
+            for (int i = movementPoints.Count; i > 0; i--)
+            {
+                Gizmos.DrawSphere(movementPoints[i - 1], .5f);
+                
+                if (movementPoints.Count > 2 && i == movementPoints.Count)
+                {
+                    Gizmos.DrawLine(movementPoints[i - 1], movementPoints[0]);
+                    Gizmos.DrawLine(movementPoints[i - 1], movementPoints[i - 2]);
+                }
+                else if (i != 1)
+                {
+                    Gizmos.DrawLine(movementPoints[i - 1], movementPoints[i - 2]);
+                }
+                
+            }
+        }
+        
     }
 }
