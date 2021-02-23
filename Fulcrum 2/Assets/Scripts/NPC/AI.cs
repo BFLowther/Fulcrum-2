@@ -15,7 +15,9 @@ public class AI : MonoBehaviour
 {
     public Transform playersTransform;
 
-    Transform lastKnownPlayerLocation;
+    Vector3 lastKnownPlayerLocation;
+
+    //Transform lastKnownPlayerLocation;
 
     public float seeHearRange = 10f;
     private bool canSeeHear = false;
@@ -63,7 +65,7 @@ public class AI : MonoBehaviour
 
     void SeeHear()
     {
-        lastKnownPlayerLocation = playersTransform;
+        lastKnownPlayerLocation = playersTransform.position;
         aiState = AiState.hunting;
         canSeeHear = false;
     }
@@ -94,8 +96,8 @@ public class AI : MonoBehaviour
             meshAgent.destination = transform.position;
         else
         {
-            meshAgent.destination = lastKnownPlayerLocation.position;
-            if (Vector3.Distance(transform.position, lastKnownPlayerLocation.position) < 1f)
+            meshAgent.destination = lastKnownPlayerLocation;
+            if (Vector3.Distance(transform.position, lastKnownPlayerLocation) < 1f)
                 aiState = AiState.idle;
         }
 
