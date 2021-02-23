@@ -22060,7 +22060,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2.57
   m_Direction: 1
-  m_Center: {x: -0.22, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1440406733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22121,7 +22121,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1440406726}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.8
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -22147,6 +22147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 1400433357}
+  seeHearRange: 20
+  shootFromRange: 10
 --- !u!1 &1441702414
 GameObject:
   m_ObjectHideFlags: 0

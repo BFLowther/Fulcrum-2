@@ -18,13 +18,13 @@ public class AI : MonoBehaviour
     Transform lastKnownPlayerLocation;
 
     public float seeHearRange = 10f;
-    bool canSeeHear = false;
-    AiState aiState = AiState.idle;
+    private bool canSeeHear = false;
+    private AiState aiState = AiState.idle;
 
     public float shootFromRange = 5f;
-    bool inRange = false;
+    private bool inRange = false;
 
-    NavMeshAgent meshAgent;
+    private NavMeshAgent meshAgent;
 
     private void Start()
     {
@@ -53,16 +53,19 @@ public class AI : MonoBehaviour
 
     void CheckSenses()
     {
-        if(Vector3.Distance(gameObject.transform.position, playersTransform.position) < seeHearRange)
+        if (Vector3.Distance(transform.position, playersTransform.position) < seeHearRange)
         {
             canSeeHear = true;
         }
+        else
+            canSeeHear = false;
     }
 
     void SeeHear()
     {
         lastKnownPlayerLocation = playersTransform;
         aiState = AiState.hunting;
+        canSeeHear = false;
     }
 
     void Idle()
@@ -82,20 +85,30 @@ public class AI : MonoBehaviour
 
     void Hunting()
     {
-        if (Vector3.Distance(gameObject.transform.position, playersTransform.position) < shootFromRange)
+        if (Vector3.Distance(transform.position, playersTransform.position) < shootFromRange)
             inRange = true;
         else
             inRange = false;
 
         if (inRange)
-            meshAgent.destination = gameObject.transform.position;
+            meshAgent.destination = transform.position;
         else
         {
             meshAgent.destination = lastKnownPlayerLocation.position;
-            if (Vector3.Distance(gameObject.transform.position, lastKnownPlayerLocation.position) < 1)
+            if (Vector3.Distance(transform.position, lastKnownPlayerLocation.position) < 1f)
                 aiState = AiState.idle;
         }
 
         
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, seeHearRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, shootFromRange);
+        Gizmos.color = Color.white;
+        Gizmos.DrawLine(transform.position, meshAgent.destination);
     }
 }
