@@ -17160,6 +17160,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180978284}
   m_Mesh: {fileID: 4300000, guid: de033b8c366234f4d974829806a4ac9e, type: 3}
+--- !u!1 &1190332568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1190332569}
+  - component: {fileID: 1190332571}
+  - component: {fileID: 1190332570}
+  m_Layer: 0
+  m_Name: Gun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1190332569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190332568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1400433357}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1190332570
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190332568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 20
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1190332571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190332568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c19480c664d944887200e06eab9159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1201097105
 GameObject:
   m_ObjectHideFlags: 0
@@ -21032,6 +21089,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114774092212451902, guid: a5de53628eab84015af071a853659e63, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4755201817636424300, guid: 33b7d58a2951f9d48a62119b93641da7, type: 3}
+    - target: {fileID: 114774092212451902, guid: a5de53628eab84015af071a853659e63, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4755201817636424300, guid: 33b7d58a2951f9d48a62119b93641da7, type: 3}
+    - target: {fileID: 212755797380771124, guid: a5de53628eab84015af071a853659e63, type: 3}
+      propertyPath: m_Size.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 212755797380771124, guid: a5de53628eab84015af071a853659e63, type: 3}
+      propertyPath: m_Size.y
+      value: 5.12
+      objectReference: {fileID: 0}
     - target: {fileID: 212755797380771124, guid: a5de53628eab84015af071a853659e63, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21047,6 +21120,10 @@ PrefabInstance:
     - target: {fileID: 212755797380771124, guid: a5de53628eab84015af071a853659e63, type: 3}
       propertyPath: m_Color.r
       value: 0.3379202
+      objectReference: {fileID: 0}
+    - target: {fileID: 212755797380771124, guid: a5de53628eab84015af071a853659e63, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5de53628eab84015af071a853659e63, type: 3}
@@ -21961,7 +22038,7 @@ GameObject:
   - component: {fileID: 1440406734}
   m_Layer: 0
   m_Name: Policeman
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
