@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float vertical;
     private float horizontal;
     private bool run;
+<<<<<<< Updated upstream
     private bool shoot;
     private bool reloading = false;
     public float reloadSpeed = 5f;
@@ -25,6 +26,9 @@ public class PlayerController : MonoBehaviour
     Gun myGun;
     public GameObject bulletPrefab;
     GameObject bullet;
+=======
+    private bool isWalkingForward;
+>>>>>>> Stashed changes
 
     private Animator anim;
     private bool playIdle;
@@ -43,9 +47,13 @@ public class PlayerController : MonoBehaviour
     {
         idleCount = 5.0f;
         anim.SetFloat("idleTimer", idleCount);
+<<<<<<< Updated upstream
         reloadTime = reloadSpeed;
         magizineCounter = magizineSize;
         myGun = gameObject.GetComponentInChildren<Gun>();
+=======
+        isWalkingForward = false;
+>>>>>>> Stashed changes
     }
 
     // Update is called once per frame
@@ -64,8 +72,20 @@ public class PlayerController : MonoBehaviour
     {
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
+<<<<<<< Updated upstream
         shoot = Input.GetButton("Fire1");
         //run = Input.GetButton("Run"); (not used in this build)
+=======
+        run = Input.GetButton("Run");
+        if (Input.GetKeyDown("space"))
+        {
+            isWalkingForward = true;
+        }
+        else
+        {
+            isWalkingForward = false;
+        }
+>>>>>>> Stashed changes
     }
 
     void MovePlayer()
