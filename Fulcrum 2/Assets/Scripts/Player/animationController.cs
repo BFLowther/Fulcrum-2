@@ -6,27 +6,20 @@ public class NewAnimController : MonoBehaviour
 {
 
 
-    public Slider sliderScrubber;
+   
     public Animator animator;
-    bool isWalkingForward = false;
 
     void Start()
     {
 
-        gameObject.GetComponent<Animator>().Play("maleIdle.anim");
+        animator=this.GetComponent<Animator>();
         
     }
 
     public void Update()
     {
-        if (Input.GetKey("w"))
-        {
-            isWalkingForward = true;
-        }
-        else
-        {
-            isWalkingForward = false;
-        }
+        float move = Input.GetAxis("Vertical");
+        animator.SetFloat("Speed", move);
     }
 
     
