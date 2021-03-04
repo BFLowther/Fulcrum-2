@@ -2,10 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-public class NewAnimController : MonoBehaviour
+public class animationController : MonoBehaviour
 {
-
-
    
     public Animator animator;
 
@@ -19,7 +17,10 @@ public class NewAnimController : MonoBehaviour
     public void Update()
     {
         float move = Input.GetAxis("Vertical");
-        animator.SetFloat("Speed", move);
+        animator.SetFloat("ForwardSpeed", move);
+
+        float sideMove = Input.GetAxis("Horizontal");
+        animator.SetFloat("SideSpeed", sideMove);
     }
 
     

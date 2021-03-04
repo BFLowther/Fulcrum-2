@@ -21157,25 +21157,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1400433356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400433354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 813e6b0e85c1b7b48b2f8658cc0e6a80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  runMultiplier: 1.5
-  idleCount: 0
-  reloadSpeed: 5
-  magizineSize: 6
-  shootDelay: 1
-  bulletPrefab: {fileID: 0}
 --- !u!4 &1400433357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4559316402638488, guid: a5de53628eab84015af071a853659e63, type: 3}
@@ -21193,6 +21174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80800d2fcfe3ce54188a64d1cf38d4a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &1404001995
 GameObject:
   m_ObjectHideFlags: 0
@@ -26622,6 +26604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80800d2fcfe3ce54188a64d1cf38d4a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1653295501}
 --- !u!1 &1654737535
 GameObject:
   m_ObjectHideFlags: 0
