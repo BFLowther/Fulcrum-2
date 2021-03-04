@@ -171,7 +171,8 @@ public class AI : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, shootFromRange);
         Gizmos.color = Color.white;
-        Gizmos.DrawLine(transform.position, meshAgent.destination);
+        if(meshAgent != null)
+            Gizmos.DrawLine(transform.position, meshAgent.destination);
     }
 
     void MovementPointGizmos()
