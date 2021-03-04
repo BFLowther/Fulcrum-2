@@ -9,8 +9,9 @@ public class CharacterSelection : MonoBehaviour
     public void NextCharacter()
     {
         characters[selectedCharacter].SetActive(false);
-        selectedCharacter = (selectedCharacter + 1) % characters.Length;
+        selectedCharacter = (selectedCharacter++); //% characters.Length;
         characters[selectedCharacter].SetActive(true);
+        Debug.Log("Next Character Selected"); 
     }
 
     public void PreviousCharacter()
@@ -22,11 +23,12 @@ public class CharacterSelection : MonoBehaviour
             selectedCharacter += characters.Length;
         }
         characters[selectedCharacter].SetActive(true);
+        Debug.Log("Previous Character Selected");
     }
 
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        //SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
