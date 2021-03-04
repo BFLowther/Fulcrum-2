@@ -6,33 +6,34 @@ public class Gun : MonoBehaviour
 {
     private List<GameObject> enemys = new List<GameObject>();
     private bool inList = false;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy")
         {
             for (int i = enemys.Count; i > 0; i--)
             {
-                if (collision.gameObject.name == enemys[i - 1].name)
+                if (other.gameObject.name == enemys[i - 1].name)
                 {
                     inList = true;
                 }
             }
             if (!(inList))
             {
-                enemys.Add(collision.gameObject);
+                enemys.Add(other.gameObject);
                 inList = false;
             }
         }
-
-
     }
-    private void OnCollisionExit(Collision collision)
+
+
+    private void OnTriggerExit(Collider other)
     {
         for (int i = enemys.Count; i > 0; i--)
         {
-            if (collision.gameObject.name == enemys[i - 1].name)
+            if (other.gameObject.name == enemys[i - 1].name)
             {
                 enemys.RemoveAt(i - 1);
+                Debug.Log("here");
             }
         }
     }
@@ -47,6 +48,7 @@ public class Gun : MonoBehaviour
             {
                 if (Vector3.Distance(enemys[i - 1].transform.position, playerPosition) < Vector3.Distance(closestEnemy, playerPosition))
                     closestEnemy = enemys[i - 1].transform.position;
+                
             }
             return closestEnemy;
         }

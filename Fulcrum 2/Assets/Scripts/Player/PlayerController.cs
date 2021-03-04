@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
-    // Use this for initialization
     void Start()
     {
         idleCount = 5.0f;
@@ -49,7 +48,6 @@ public class PlayerController : MonoBehaviour
         myGun = gameObject.GetComponentInChildren<Gun>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateInputs();
@@ -104,10 +102,12 @@ public class PlayerController : MonoBehaviour
                     
                     if (GetDirection() != new Vector3(0, 0, 0))
                     {
+                        Debug.Log("shot");
                         bullet = Instantiate(bulletPrefab);
                         bullet.transform.position = gameObject.transform.position;
                         bullet.transform.rotation = Quaternion.LookRotation(GetDirection(), Vector3.up);
                         bullet.GetComponent<ParticleSystem>().Play();
+                        magizineCounter--;
                         shootDelayCounter = shootDelay;
                     }
                     

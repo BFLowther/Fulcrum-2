@@ -1473,7 +1473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &115639429
 Transform:
   m_ObjectHideFlags: 0
@@ -3443,7 +3443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &215922821
 Animator:
   serializedVersion: 3
@@ -22030,7 +22030,6 @@ GameObject:
   - component: {fileID: 1440406727}
   - component: {fileID: 1440406733}
   - component: {fileID: 1440406732}
-  - component: {fileID: 1440406731}
   - component: {fileID: 1440406730}
   - component: {fileID: 1440406729}
   - component: {fileID: 1440406728}
@@ -22103,27 +22102,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1440406731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 114172652758683628, guid: e3b3ca0683e58453ea92d7e7bfe031ee, type: 3}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440406726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e531bcb977f420b4d9816a605cbd94be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LocationName: Policce Station
-  questionSet: {fileID: 11400000, guid: 9d3addb6234fd4e6daff0580a0e55d05, type: 2}
-  purchaseItemSet:
-    title: Shop
-    description: 
-    purchaseItems: []
-  _locationMode: 1
 --- !u!136 &1440406732
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24662,7 +24642,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1558589909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35025,7 +35005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1890931097
 Animator:
   serializedVersion: 3
@@ -35889,7 +35869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1941596137
 Transform:
   m_ObjectHideFlags: 0
