@@ -13,6 +13,19 @@ public class PlayerController : MonoBehaviour
     private float vertical;
     private float horizontal;
     private bool run;
+    private bool shoot;
+    private bool reloading = false;
+    public float reloadSpeed = 5f;
+    private float reloadTime;
+    public int magizineSize = 6;
+    private int magizineCounter;
+    public float shootDelay = 1f;
+    private float shootDelayCounter = 0f;
+
+    Gun myGun;
+    public GameObject bulletPrefab;
+    GameObject bullet;
+
 
     private Animator anim;
     private bool playIdle;
@@ -26,17 +39,19 @@ public class PlayerController : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
     }
 
-    // Use this for initialization
     void Start()
     {
         idleCount = 5.0f;
         anim.SetFloat("idleTimer", idleCount);
+        reloadTime = reloadSpeed;
+        magizineCounter = magizineSize;
+        myGun = gameObject.GetComponentInChildren<Gun>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         UpdateInputs();
+        TakeAShot();
     }
 
     void FixedUpdate()
@@ -48,7 +63,9 @@ public class PlayerController : MonoBehaviour
     {
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
-        run = Input.GetButton("Run");
+        shoot = Input.GetButton("Fire1");
+        //run = Input.GetButton("Run"); (not used in this build)
+
     }
 
     void MovePlayer()
@@ -71,5 +88,50 @@ public class PlayerController : MonoBehaviour
         {
             _spriteRenderer.flipX = true;
         }
+    }
+
+    void TakeAShot()
+    {
+        if (shoot && !reloading)
+        {
+            
+            if (magizineCounter > 0)
+            {
+                if (shootDelayCounter <= 0)
+                {
+                    
+                    if (GetDirection() != new Vector3(0, 0, 0))
+                    {
+                        Debug.Log("shot");
+                        bullet = Instantiate(bulletPrefab);
+                        bullet.transform.position = gameObject.transform.position;
+                        bullet.transform.rotation = Quaternion.LookRotation(GetDirection(), Vector3.up);
+                        bullet.GetComponent<ParticleSystem>().Play();
+                        magizineCounter--;
+                        shootDelayCounter = shootDelay;
+                    }
+                    
+                }
+                else
+                    shootDelayCounter -= Time.deltaTime;
+            }
+            else
+                reloading = true;
+        }
+        if (reloading)
+        {
+            reloadTime -= Time.deltaTime;
+            if (reloadTime <= 0f)
+            {
+                reloading = false;
+                magizineCounter = magizineSize;
+                reloadTime = reloadSpeed;
+            }
+        }
+    }
+
+    private Vector3 GetDirection()
+    {
+        return myGun.ClosestEnemy(gameObject.transform.position) - gameObject.transform.position;
     }
 }
