@@ -10,32 +10,34 @@ public class Gun : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            for (int i = enemys.Count; i > 0; i--)
-            {
-                if (other.gameObject.name == enemys[i - 1].name)
-                {
-                    inList = true;
-                }
-            }
-            if (!(inList))
-            {
-                enemys.Add(other.gameObject);
-                inList = false;
-            }
+        //    for (int i = enemys.Count; i > 0; i--)
+        //    {
+        //        if (other.gameObject.name == enemys[i - 1].name)
+        //        {
+        //            inList = true;
+        //        }
+        //    }
+        //    if (!(inList))
+        //    {
+        //        enemys.Add(other.gameObject);
+        //        inList = false;
+        //    }
+            enemys.Add(other.gameObject);
         }
+
     }
 
 
     private void OnTriggerExit(Collider other)
     {
-        for (int i = enemys.Count; i > 0; i--)
-        {
-            if (other.gameObject.name == enemys[i - 1].name)
+        if (other.gameObject.tag == "Enemy")
+            for (int i = enemys.Count; i > 0; i--)
             {
-                enemys.RemoveAt(i - 1);
-                Debug.Log("here");
+                if (other.gameObject.name == enemys[i - 1].name)
+                {
+                    enemys.RemoveAt(i - 1);
+                }
             }
-        }
     }
 
     public Vector3 ClosestEnemy(Vector3 playerPosition)

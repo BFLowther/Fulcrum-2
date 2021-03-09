@@ -17,14 +17,18 @@ public class PlayerController : MonoBehaviour
     private bool reloading = false;
     public float reloadSpeed = 5f;
     private float reloadTime;
-    public int magizineSize = 6;
-    private int magizineCounter;
+    public int magazineSize = 6;
+    private int magazineCounter;
     public float shootDelay = 1f;
     private float shootDelayCounter = 0f;
 
     Gun myGun;
     public GameObject bulletPrefab;
     GameObject bullet;
+    public float bulletSpeed = 10f;
+
+    public float health = 10f;
+    public float dmgTakenPerHit = 2f;
 
 
     private Animator anim;
@@ -44,7 +48,7 @@ public class PlayerController : MonoBehaviour
         idleCount = 5.0f;
         anim.SetFloat("idleTimer", idleCount);
         reloadTime = reloadSpeed;
-        magizineCounter = magizineSize;
+        magazineCounter = magazineSize;
         myGun = gameObject.GetComponentInChildren<Gun>();
     }
 
@@ -95,19 +99,19 @@ public class PlayerController : MonoBehaviour
         if (shoot && !reloading)
         {
             
-            if (magizineCounter > 0)
+            if (magazineCounter > 0)
             {
                 if (shootDelayCounter <= 0)
                 {
                     
                     if (GetDirection() != new Vector3(0, 0, 0))
                     {
-                        Debug.Log("shot");
                         bullet = Instantiate(bulletPrefab);
                         bullet.transform.position = gameObject.transform.position;
                         bullet.transform.rotation = Quaternion.LookRotation(GetDirection(), Vector3.up);
                         bullet.GetComponent<ParticleSystem>().Play();
-                        magizineCounter--;
+                        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
+                        magazineCounter--;
                         shootDelayCounter = shootDelay;
                     }
                     
@@ -123,9 +127,9 @@ public class PlayerController : MonoBehaviour
             reloadTime -= Time.deltaTime;
             if (reloadTime <= 0f)
             {
-                reloading = false;
-                magizineCounter = magizineSize;
+                magazineCounter = magazineSize;
                 reloadTime = reloadSpeed;
+                reloading = false;
             }
         }
     }
@@ -133,5 +137,14 @@ public class PlayerController : MonoBehaviour
     private Vector3 GetDirection()
     {
         return myGun.ClosestEnemy(gameObject.transform.position) - gameObject.transform.position;
+    }
+
+    public void TakeAHit()
+    {
+        health -= dmgTakenPerHit;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
