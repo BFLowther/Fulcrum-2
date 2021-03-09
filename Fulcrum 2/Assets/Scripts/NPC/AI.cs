@@ -29,6 +29,10 @@ public class AI : MonoBehaviour
     public float seeHearRange = 10f;
     public float shootFromRange = 5f;
 
+    [Header("AI Health Settings")]
+    public float health = 10f;
+    public float dmgTakenPerHit = 2f;
+
     private bool canSeeHear = false;
     private bool inRange = false;
     private AiState aiState = AiState.idle;
@@ -157,6 +161,15 @@ public class AI : MonoBehaviour
         potrolWaitTimeCounter = potrolWaitTime;
     }
 
+    public void TakeAHit()
+    {
+        health -= dmgTakenPerHit;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnDrawGizmos()
     {
         AiGizmos();
@@ -171,7 +184,8 @@ public class AI : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, shootFromRange);
         Gizmos.color = Color.white;
-        Gizmos.DrawLine(transform.position, meshAgent.destination);
+        if(meshAgent != null)
+            Gizmos.DrawLine(transform.position, meshAgent.destination);
     }
 
     void MovementPointGizmos()
