@@ -13,7 +13,7 @@ public class PlayerHitPoint : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PlayerBullet")
+        if (other.gameObject.tag == "EnemyBullet")
         {
             playerController.TakeAHit();
             Destroy(other.gameObject);
