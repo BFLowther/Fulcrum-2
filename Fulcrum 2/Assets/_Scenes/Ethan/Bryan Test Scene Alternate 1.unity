@@ -2859,6 +2859,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184686580}
   m_Mesh: {fileID: 4300004, guid: cc4eced9259fb274c8db4ff58e29383a, type: 3}
+--- !u!1 &186412366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1190332568, guid: a5de53628eab84015af071a853659e63, type: 3}
+  m_PrefabInstance: {fileID: 1400433353}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &190905723
 GameObject:
   m_ObjectHideFlags: 0
@@ -38743,6 +38748,14 @@ PrefabInstance:
       propertyPath: playersTransform
       value: 
       objectReference: {fileID: 1400433357}
+    - target: {fileID: 1981773625, guid: e3b3ca0683e58453ea92d7e7bfe031ee, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1400433357}
+    - target: {fileID: 1981773625, guid: e3b3ca0683e58453ea92d7e7bfe031ee, type: 3}
+      propertyPath: playersGun
+      value: 
+      objectReference: {fileID: 186412366}
     - target: {fileID: 1314397065410590, guid: e3b3ca0683e58453ea92d7e7bfe031ee, type: 3}
       propertyPath: m_Name
       value: Policeman
