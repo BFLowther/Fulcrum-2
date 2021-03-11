@@ -87,7 +87,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314397065410590}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 90.3, y: 17.9, z: 102.1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 0}
-  defaultAiState: 2
+  defaultAiState: 1
   movementPoints:
   - {x: 84.98, y: 17.9, z: 102.1}
   - {x: 85, y: 17.9, z: 94}
@@ -231,9 +231,14 @@ MonoBehaviour:
   potrolSeeHearRangePenalty: 0.66
   wanderingSeeHearRangePenalty: 0.75
   seeHearRange: 20
-  shootFromRange: 10
+  closeEnoughRange: 5
   health: 10
   dmgTakenPerHit: 2
+  bulletPrefab: {fileID: 5628952025651707208, guid: d3df8ac62e4e08d4c9e8ca05b1a5e2b9, type: 3}
+  magazineSize: 6
+  shootDelay: 1
+  reloadSpeed: 5
+  bulletSpeed: 10
 --- !u!195 &1440406734
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -27,20 +27,37 @@ public class AI : MonoBehaviour
 
     [Header("AI Ranges")]
     public float seeHearRange = 10f;
-    public float shootFromRange = 5f;
+    public float closeEnoughRange = 5f;
 
     [Header("AI Health Settings")]
     public float health = 10f;
     public float dmgTakenPerHit = 2f;
 
+    [Header("AI Shooting Settings")]
+    public GameObject bulletPrefab;
+    public int magazineSize = 6;
+    public float shootDelay = 1f;
+    public float reloadSpeed = 5f;
+    public float bulletSpeed = 10f;
+
+
     private bool canSeeHear = false;
     private bool inRange = false;
+    private bool inRangeToShoot = false;
     private AiState aiState = AiState.idle;
     private AiState lastAiState = AiState.idle;
     private bool still = false;
     private int currentMovementPoint = 0;
     private float potrolWaitTimeCounter;
     private float seeHearRangeBackup;
+
+    private bool reloading = false;
+    private float shootDelayCounter = 0f;
+    private float reloadTime;
+    private int magazineCounter = 6;
+    GameObject bullet;
+    private Vector3 bulletPosition;
+
 
     private NavMeshAgent meshAgent;
 
@@ -51,6 +68,9 @@ public class AI : MonoBehaviour
         meshAgent = GetComponent<NavMeshAgent>();
         potrolWaitTimeCounter = potrolWaitTime;
         seeHearRangeBackup = seeHearRange;
+
+        reloadTime = reloadSpeed;
+        magazineCounter = magazineSize;
     }
 
     void Update()
@@ -78,9 +98,13 @@ public class AI : MonoBehaviour
         if (Vector3.Distance(transform.position, playersTransform.position) < seeHearRange)
         {
             canSeeHear = true;
+            inRangeToShoot = true;
         }
         else
+        {
             canSeeHear = false;
+            inRangeToShoot = false;
+        }
     }
 
     void SeeHear()
@@ -132,7 +156,7 @@ public class AI : MonoBehaviour
     void Hunting()
     {
         seeHearRange = seeHearRangeBackup;
-        if (Vector3.Distance(transform.position, playersTransform.position) < shootFromRange)
+        if (Vector3.Distance(transform.position, playersTransform.position) < closeEnoughRange)
             inRange = true;
         else
             inRange = false;
@@ -145,7 +169,7 @@ public class AI : MonoBehaviour
             if (meshAgent.remainingDistance < .5f)
                 aiState = AiState.idle;
         }
-
+        TakeAShot();
         lastAiState = AiState.hunting;
     }
 
@@ -170,6 +194,53 @@ public class AI : MonoBehaviour
         }
     }
 
+    void TakeAShot()
+    {
+        if (inRangeToShoot && !reloading)
+        {
+
+            if (magazineCounter > 0)
+            {
+                if (shootDelayCounter <= 0)
+                {
+
+                    if (inRangeToShoot)
+                    {
+                        bulletPosition = gameObject.transform.position;
+                        bulletPosition.y = lastKnownPlayerLocation.y;
+                        bullet = Instantiate(bulletPrefab);
+                        bullet.transform.position = bulletPosition;
+                        bullet.transform.rotation = Quaternion.LookRotation(GetDirection(), Vector3.up);
+                        bullet.GetComponent<ParticleSystem>().Play();
+                        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
+                        magazineCounter--;
+                        shootDelayCounter = shootDelay;
+                    }
+
+                }
+                else
+                    shootDelayCounter -= Time.deltaTime;
+            }
+            else
+                reloading = true;
+        }
+        if (reloading)
+        {
+            reloadTime -= Time.deltaTime;
+            if (reloadTime <= 0f)
+            {
+                magazineCounter = magazineSize;
+                reloadTime = reloadSpeed;
+                reloading = false;
+            }
+        }
+    }
+
+    private Vector3 GetDirection()
+    {
+        return lastKnownPlayerLocation - bulletPosition;
+    }
+
     private void OnDrawGizmos()
     {
         AiGizmos();
@@ -182,7 +253,7 @@ public class AI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, seeHearRange);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, shootFromRange);
+        Gizmos.DrawWireSphere(transform.position, closeEnoughRange);
         Gizmos.color = Color.white;
         if(meshAgent != null)
             Gizmos.DrawLine(transform.position, meshAgent.destination);
