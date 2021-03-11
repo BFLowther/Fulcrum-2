@@ -16,8 +16,8 @@ public class animationController : MonoBehaviour
 
     public void Update()
     {
-        float move = Input.GetAxis("Vertical");
-        animator.SetFloat("ForwardSpeed", move);
+        float move = Input.GetAxis("Vertical");//sets move to Verticals value
+        animator.SetFloat("ForwardSpeed", move); //sets ForwardSpeed to move's value
 
         float sideMove = Input.GetAxis("Horizontal");
         animator.SetFloat("SideSpeed", sideMove);
