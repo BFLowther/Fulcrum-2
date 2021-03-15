@@ -9,7 +9,7 @@ public class CharacterSelection : MonoBehaviour
     public void NextCharacter()
     {
         characters[selectedCharacter].SetActive(false);
-        selectedCharacter = (selectedCharacter++); //% characters.Length;
+        selectedCharacter = (selectedCharacter + 1) % characters.Length;
         characters[selectedCharacter].SetActive(true);
         Debug.Log("Next Character Selected"); 
     }
