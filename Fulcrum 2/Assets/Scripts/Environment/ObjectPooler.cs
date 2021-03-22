@@ -5,8 +5,10 @@ using UnityEngine;
 public class ObjectPooler : MonoBehaviour
 {
     public static ObjectPooler SharedInstance;
-
+    [HideInInspector]
     public List<GameObject> pooledObjects;
+
+
     public GameObject objectToPool;
     public int amountToPool;
 
