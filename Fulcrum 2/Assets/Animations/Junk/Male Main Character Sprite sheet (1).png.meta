@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 823d220acb428c14cb76d1b645d6b276
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1978543491369442640
+    second: Male Main Character Sprite sheet (1)_0
+  - first:
+      213: -2278772981336280301
+    second: Male Main Character Sprite sheet (1)_1
+  - first:
+      213: 6944157615275589210
+    second: Male Main Character Sprite sheet (1)_2
+  - first:
+      213: 8694123140626531807
+    second: Male Main Character Sprite sheet (1)_3
+  - first:
+      213: -516147708602773301
+    second: Male Main Character Sprite sheet (1)_4
+  - first:
+      213: 8528026437848631803
+    second: Male Main Character Sprite sheet (1)_6
+  - first:
+      213: 6940660050862858772
+    second: Male Main Character Sprite sheet (1)_7
+  - first:
+      213: -51117148928889429
+    second: Male Main Character Sprite sheet (1)_8
+  - first:
+      213: -493976357645745452
+    second: Male Main Character Sprite sheet (1)_9
+  - first:
+      213: -4211196621023422157
+    second: Male Main Character Sprite sheet (1)_10
+  - first:
+      213: 2907217669591325817
+    second: Male Main Character Sprite sheet (1)_12
+  - first:
+      213: -5583435492303455652
+    second: Male Main Character Sprite sheet (1)_13
+  - first:
+      213: 5501217079460729603
+    second: Male Main Character Sprite sheet (1)_14
+  - first:
+      213: 6693297287986672481
+    second: Male Main Character Sprite sheet (1)_15
+  - first:
+      213: 3538108639556228596
+    second: Male Main Character Sprite sheet (1)_16
+  - first:
+      213: 5638370675482534522
+    second: Male Main Character Sprite sheet (1)_17
+  - first:
+      213: -1270684313680676066
+    second: Male Main Character Sprite sheet (1)_18
+  - first:
+      213: 251079876570790762
+    second: Male Main Character Sprite sheet (1)_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d9cb792d2357b10800000000000000
+      internalID: 1978543491369442640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_1
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31371b30c0c2060e0800000000000000
+      internalID: -2278772981336280301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_2
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e33d23f8a9e5060800000000000000
+      internalID: 6944157615275589210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd54c86deeab7a870800000000000000
+      internalID: 8694123140626531807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc09919c46646d8f0800000000000000
+      internalID: -516147708602773301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_6
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf98b1f9cd2a95670800000000000000
+      internalID: 8528026437848631803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_7
+      rect:
+        serializedVersion: 2
+        x: 2517
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412ec660b8d225060800000000000000
+      internalID: 6940660050862858772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_8
+      rect:
+        serializedVersion: 2
+        x: 2927
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bada92059356a4ff0800000000000000
+      internalID: -51117148928889429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_9
+      rect:
+        serializedVersion: 2
+        x: 3310
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d28513be1b0529f0800000000000000
+      internalID: -493976357645745452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_10
+      rect:
+        serializedVersion: 2
+        x: 3673
+        y: 3600
+        width: 350
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339d29c2cf2de85c0800000000000000
+      internalID: -4211196621023422157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_12
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 3000
+        width: 350
+        height: 569
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cdab04113885820800000000000000
+      internalID: 2907217669591325817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_13
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 3004
+        width: 350
+        height: 565
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ab1f68007a382b0800000000000000
+      internalID: -5583435492303455652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_14
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 2996
+        width: 350
+        height: 569
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303919d79cf385c40800000000000000
+      internalID: 5501217079460729603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 3000
+        width: 350
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163f78abb6e53ec50800000000000000
+      internalID: 6693297287986672481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 3004
+        width: 350
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f55d7ddf03e91130800000000000000
+      internalID: 3538108639556228596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 3000
+        width: 350
+        height: 561
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72ad1881448f3e40800000000000000
+      internalID: 5638370675482534522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_18
+      rect:
+        serializedVersion: 2
+        x: 2307
+        y: 3000
+        width: 350
+        height: 569
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bf66d595f9d5ee0800000000000000
+      internalID: -1270684313680676066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Male Main Character Sprite sheet (1)_20
+      rect:
+        serializedVersion: 2
+        x: 2708
+        y: 3004
+        width: 350
+        height: 557
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b304541d30c7300800000000000000
+      internalID: 251079876570790762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 04fc03d00d4695b49a499cca620922d0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
