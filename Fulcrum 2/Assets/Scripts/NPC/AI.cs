@@ -190,6 +190,7 @@ public class AI : MonoBehaviour
         health -= dmgTakenPerHit;
         if (health <= 0)
         {
+            Gun.SharedInstance.removeEnemy(gameObject);
             Destroy(gameObject);
         }
     }

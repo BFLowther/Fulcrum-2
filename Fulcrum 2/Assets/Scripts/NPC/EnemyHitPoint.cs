@@ -17,4 +17,6 @@ public class EnemyHitPoint : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    
 }

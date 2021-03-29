@@ -3,8 +3,23 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public static Gun SharedInstance;
     private List<GameObject> enemys = new List<GameObject>();
+    Vector3 playerPosition;
     private bool inList = false;
+
+    private void Awake()
+    {
+        SharedInstance = this;
+    }
+
+
+    private void Update()
+    {
+
+        playerPosition = GetComponentInParent<Transform>().position;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -39,6 +54,18 @@ public class Gun : MonoBehaviour
             }
     }
 
+    public void removeEnemy(GameObject other)
+    {
+        if (other.tag == "Enemy")
+            for (int i = enemys.Count; i > 0; i--)
+            {
+                if (other.gameObject.name == enemys[i - 1].name)
+                {
+                    enemys.RemoveAt(i - 1);
+                }
+            }
+    }
+
     public Vector3 ClosestEnemy(Vector3 playerPosition)
     {
         if (enemys.Count > 0)
@@ -56,7 +83,7 @@ public class Gun : MonoBehaviour
         return playerPosition;
     }
 
-    public bool ClosestEnemy (Vector3 playerPosition, string other)
+    public bool ClosestEnemy (string other)
     {
         if (enemys.Count > 0)
         {
