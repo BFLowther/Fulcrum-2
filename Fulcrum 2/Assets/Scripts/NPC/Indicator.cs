@@ -12,7 +12,7 @@ public class Indicator : MonoBehaviour
 
     private void Update()
     {
-        if (Gun.SharedInstance.ClosestEnemy( gameObject.transform.parent.name))
+        if (Gun.SharedInstance.ClosestEnemy(gameObject.transform.parent.name))
         {
             spriteRenderer.color = indicatorColor;
         }

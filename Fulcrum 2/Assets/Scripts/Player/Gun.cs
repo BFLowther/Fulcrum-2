@@ -13,8 +13,10 @@ public class Gun : MonoBehaviour
         SharedInstance = this;
     }
 
-    private void Start()
+
+    private void Update()
     {
+
         playerPosition = GetComponentInParent<Transform>().position;
     }
 
