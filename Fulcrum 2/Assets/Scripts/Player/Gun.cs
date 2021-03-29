@@ -3,8 +3,15 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    public static Gun SharedInstance;
     private List<GameObject> enemys = new List<GameObject>();
     private bool inList = false;
+
+    private void Awake()
+    {
+        SharedInstance = this;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -30,6 +37,18 @@ public class Gun : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
+            for (int i = enemys.Count; i > 0; i--)
+            {
+                if (other.gameObject.name == enemys[i - 1].name)
+                {
+                    enemys.RemoveAt(i - 1);
+                }
+            }
+    }
+
+    public void removeEnemy(GameObject other)
+    {
+        if (other.tag == "Enemy")
             for (int i = enemys.Count; i > 0; i--)
             {
                 if (other.gameObject.name == enemys[i - 1].name)
