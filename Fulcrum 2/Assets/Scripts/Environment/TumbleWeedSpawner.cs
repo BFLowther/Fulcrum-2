@@ -44,8 +44,8 @@ public class TumbleWeedSpawner : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(transform.position, 1f);
-        Gizmos.DrawWireSphere(transform.position + transform.forward * distanceBeforeDisapear, 1f);
+        Gizmos.DrawWireSphere(transform.position, 3f);
+        Gizmos.DrawWireSphere(transform.position + transform.forward * distanceBeforeDisapear, 3f);
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * distanceBeforeDisapear);
     }
 }
