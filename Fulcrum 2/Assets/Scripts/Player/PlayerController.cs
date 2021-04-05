@@ -30,13 +30,12 @@ public class PlayerController : MonoBehaviour
     public float health = 10f;
     public float dmgTakenPerHit = 2f;
 
-
     private Animator anim;
     private bool playIdle;
 
     private SpriteRenderer _spriteRenderer;
 
-    public PlayerController SharedInstance;
+    public static PlayerController SharedInstance;
 
     void Awake()
     {
@@ -148,5 +147,10 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public float GetMagazineCount()
+    {
+        return magazineCounter;
     }
 }
