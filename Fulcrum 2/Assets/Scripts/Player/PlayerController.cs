@@ -36,9 +36,11 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
+    public PlayerController SharedInstance;
 
     void Awake()
     {
+        SharedInstance = this;
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         anim = GetComponentInChildren<Animator>();
     }
