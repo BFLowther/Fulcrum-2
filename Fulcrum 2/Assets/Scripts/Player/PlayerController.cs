@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
             
             if (magazineCounter > 0)
             {
-                if (shootDelayCounter <= 0)
+                if (shootDelayCounter <= 0f)
                 {
                     
                     if (GetDirection() != new Vector3(0, 0, 0))
@@ -152,5 +152,15 @@ public class PlayerController : MonoBehaviour
     public float GetMagazineCount()
     {
         return magazineCounter;
+    }
+
+    public bool IsReloading()
+    {
+        return reloading;
+    }
+
+    public float GetReloadTime()
+    {
+        return reloadTime;
     }
 }
