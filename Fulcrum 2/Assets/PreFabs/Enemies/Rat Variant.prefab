@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4730061564821137385}
+  player: {fileID: 0}
 --- !u!1001 &4730061566236343073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48,9 +49,13 @@ PrefabInstance:
       propertyPath: playersTransform
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1981773623, guid: e3b3ca0683e58453ea92d7e7bfe031ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.644
+      objectReference: {fileID: 0}
     - target: {fileID: 1314397065410590, guid: e3b3ca0683e58453ea92d7e7bfe031ee, type: 3}
       propertyPath: m_Name
-      value: Rat
+      value: Rat Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4604338699581246, guid: e3b3ca0683e58453ea92d7e7bfe031ee, type: 3}
       propertyPath: m_RootOrder
