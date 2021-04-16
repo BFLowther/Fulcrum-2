@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
                         bullet = Instantiate(bulletPrefab);
                         bullet.transform.position = gameObject.transform.position;
                         bullet.transform.rotation = Quaternion.LookRotation(GetDirection(), Vector3.up);
-                        bullet.GetComponent<ParticleSystem>().Play();
+                        //bullet.GetComponent<ParticleSystem>().Play();
                         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
                         magazineCounter--;
                         shootDelayCounter = shootDelay;
