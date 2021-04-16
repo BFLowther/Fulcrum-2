@@ -347,7 +347,7 @@ MonoBehaviour:
   reloadSpeed: 5
   magazineSize: 6
   shootDelay: 1
-  bulletPrefab: {fileID: 4755201817636424300, guid: 33b7d58a2951f9d48a62119b93641da7, type: 3}
+  bulletPrefab: {fileID: 345539253540275146, guid: 6b846cfe72dfe26409dcf9a68aa1db02, type: 3}
   bulletSpeed: 20
   health: 10
   dmgTakenPerHit: 2
