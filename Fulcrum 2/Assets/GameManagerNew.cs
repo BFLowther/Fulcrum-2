@@ -9,7 +9,14 @@ public class GameManagerNew : MonoBehaviour
 
     private void Awake()
     {
-        SharedInstance = this;
+        if (SharedInstance == null)
+            SharedInstance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     public void ChangeGender()

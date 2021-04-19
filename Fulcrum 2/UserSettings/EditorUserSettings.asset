@@ -5,6 +5,22 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
+<<<<<<< HEAD
+=======
+    RecentlyUsedScenePath-0:
+<<<<<<< Updated upstream
+      value: 22424703114646643e0d092c153010331e160a2b2f3c2322121c340cd6e5272cddc337fbf53f33731d03fd2e0132411cfa0b1b0af51f0f192e3bd43122fa1c1612d127f11fdb0b52de1715dad4
+      flags: 0
+    RecentlyUsedScenePath-1:
+      value: 22424703114646643e0d092c153010331e160a2b2f3c2322121c340cd6e5272cddc337fbf53f33731707f8092d0d023afc0f471ef8021e12
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 22424703114646643e0d092c15301032031e142e3f670131202c5326ece92021
+=======
+      value: 22424703114646643e0d092c15301033171a1d382d1c232339031220eaaf003df0f537e0e90e3a2f2d4cfa320d2a18
+>>>>>>> Stashed changes
+      flags: 0
+>>>>>>> main
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
