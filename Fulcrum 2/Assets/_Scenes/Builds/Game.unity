@@ -868,6 +868,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
       objectReference: {fileID: 0}
@@ -1950,6 +1954,10 @@ PrefabInstance:
       propertyPath: reloadSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
@@ -4690,6 +4698,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
       objectReference: {fileID: 0}
@@ -5682,6 +5694,10 @@ PrefabInstance:
       propertyPath: reloadSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
@@ -13849,6 +13865,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
       objectReference: {fileID: 0}
@@ -14131,6 +14151,10 @@ PrefabInstance:
       propertyPath: reloadSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
@@ -15868,6 +15892,10 @@ PrefabInstance:
       propertyPath: reloadSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
@@ -18368,6 +18396,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
       objectReference: {fileID: 0}
@@ -18791,6 +18823,10 @@ PrefabInstance:
       propertyPath: reloadSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 8945880350395395741, guid: 5f9a6a13e43bfc344ad433ea6d4d4ee9, type: 3}
     - target: {fileID: 1440406735, guid: 9dcdd1bc5731c89488507541f138dace, type: 3}
       propertyPath: magazineSize
       value: 1
