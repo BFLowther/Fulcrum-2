@@ -415,6 +415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3086006862655644186, guid: 7ae62bde4d9dddc4aba30bc56a713cd5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6054355223492068457, guid: 7ae62bde4d9dddc4aba30bc56a713cd5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -425,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6054355223492068457, guid: 7ae62bde4d9dddc4aba30bc56a713cd5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.629
       objectReference: {fileID: 0}
     - target: {fileID: 6054355223492068457, guid: 7ae62bde4d9dddc4aba30bc56a713cd5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -471,6 +475,10 @@ PrefabInstance:
     - target: {fileID: 721474007356597859, guid: 53667970ec301c8498f996bf2905d9b7, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 721474007356597859, guid: 53667970ec301c8498f996bf2905d9b7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 721474007356597919, guid: 53667970ec301c8498f996bf2905d9b7, type: 3}
       propertyPath: m_Pivot.x
