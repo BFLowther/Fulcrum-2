@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
 
     public float health = 10f;
     public float dmgTakenPerHit = 2f;
+    //public ParticleSystem DeathParticle;
+    [HideInInspector]
+    public bool dead = false;
 
     private Animator anim;
     private bool playIdle;
@@ -145,7 +148,9 @@ public class PlayerController : MonoBehaviour
         health -= dmgTakenPerHit;
         if (health <= 0)
         {
-            Destroy(gameObject);
+            //Instantiate(DeathParticle);
+            dead = true;
+            gameObject.SetActive(false);
         }
     }
 
