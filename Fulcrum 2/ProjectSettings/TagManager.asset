@@ -9,6 +9,7 @@ TagManager:
   - PlayerBullet
   - EnemyBullet
   - TumbleweedStopper
+  - Collectibles
   layers:
   - Default
   - TransparentFX
