@@ -6,6 +6,7 @@ public class GameManagerNew : MonoBehaviour
 {
     public static GameManagerNew SharedInstance;
     private bool isMale = true;
+    private int NumOfCollectables = 0;
 
     private void Awake()
     {
@@ -19,6 +20,11 @@ public class GameManagerNew : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void Start()
+    {
+        NumOfCollectables = 0;
+    }
+
     public void ChangeGender()
     {
         isMale = isMale ? false : true;
@@ -27,5 +33,20 @@ public class GameManagerNew : MonoBehaviour
     public bool IsMale()
     {
         return isMale;
+    }
+
+    public void ResetCollectables()
+    {
+        NumOfCollectables = 0;
+    }
+
+    public int GetCollectables()
+    {
+        return NumOfCollectables;
+    }
+
+    public void IncreaseCollectables()
+    {
+        NumOfCollectables++;
     }
 }
