@@ -135,13 +135,14 @@ GameObject:
   - component: {fileID: 242139460}
   - component: {fileID: 242139459}
   - component: {fileID: 242139458}
+  - component: {fileID: 242139461}
   m_Layer: 5
   m_Name: PlayerDeathCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &242139457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -223,6 +224,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &242139461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242139456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd4f5c72930b164c89b732af459bba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathScreenUI: {fileID: 242139456}
 --- !u!1 &456586469
 GameObject:
   m_ObjectHideFlags: 0
