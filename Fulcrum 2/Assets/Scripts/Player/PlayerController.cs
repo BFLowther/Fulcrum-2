@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         {
             //Instantiate(DeathParticle);
             dead = true;
-            gameObject.SetActive(false);
+            gameObject.GetComponentInChildren<SpriteRenderer>().enabled = false;
         }
     }
 

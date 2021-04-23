@@ -17,4 +17,9 @@ public class DeathScreen : MonoBehaviour
             deathScreenUI.SetActive(false);
         }
     }
+
+    public void UnkillPlayer()
+    {
+        PlayerController.SharedInstance.dead = false;
+    }
 }
