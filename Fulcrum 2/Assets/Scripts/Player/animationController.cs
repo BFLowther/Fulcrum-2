@@ -6,12 +6,16 @@ public class animationController : MonoBehaviour
 {
    
     public Animator animator;
+    private bool isMale;
+
 
     void Start()
     {
 
         animator=this.GetComponent<Animator>();
-        animator.SetBool("isMale", GameManagerNew.SharedInstance.IsMale());
+        GetComponent<GameManagerNew>().IsMale();
+        
+        animator.SetBool("isMale", isMale);
     }
 
     public void Update()
