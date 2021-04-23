@@ -4,21 +4,27 @@ using UnityEngine.AI;
 public class NPCanimationController : MonoBehaviour
 {
     public Animator animator;
-    NavMeshAgent agent;
-    private Rigidbody myRigidBody;
+    Vector3 lastPosition;
+    Transform myTransform;
+    bool isMoving;
 
     void start()
     {
         animator = this.GetComponent<Animator>();
-        myRigidBody = GetComponent<Rigidbody>();
+        myTransform = transform;
+        isMoving = false;
     }
 
     void update()
     {
-        
+        if (myTransform.position != lastPosition)
+            isMoving = true;
+        else
+            isMoving = false;
 
-       
+        lastPosition = myTransform.position;
 
+        animator.SetBool("isMoving", isMoving);
         
     }
 
