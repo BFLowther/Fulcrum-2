@@ -11,9 +11,7 @@ public class animationController : MonoBehaviour
     {
 
         animator=this.GetComponent<Animator>();
-        //GameManagerNew.SharedInstance.IsMale();
-        //animator.SetBool("isMale", IsMale);
-        
+        animator.SetBool("isMale", GameManagerNew.SharedInstance.IsMale());
     }
 
     public void Update()
