@@ -4,18 +4,17 @@ using System.Collections;
 
 public class animationController : MonoBehaviour
 {
-   
-    public Animator animator;
-    private bool isMale;
 
+    public Animator animator;
+    //private bool isMale;
+    public GameManagerNew GameManagerNew;
 
     void Start()
     {
 
-        animator=this.GetComponent<Animator>();
-        GetComponent<GameManagerNew>().IsMale();
-        
-        animator.SetBool("isMale", isMale);
+        animator = this.GetComponent<Animator>();
+       
+        animator.SetBool("isMale", GameManagerNew.IsMale());
     }
 
     public void Update()
@@ -27,5 +26,6 @@ public class animationController : MonoBehaviour
         animator.SetFloat("SideSpeed", sideMove);
     }
 
+    
     
 }
