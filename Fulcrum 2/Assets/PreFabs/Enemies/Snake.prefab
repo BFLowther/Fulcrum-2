@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 1440406728}
   - component: {fileID: 1440406735}
   - component: {fileID: 1440406734}
+  - component: {fileID: 8459918676697331605}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Enemy
@@ -360,6 +361,19 @@ NavMeshAgent:
   m_BaseOffset: 1.75
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8459918676697331605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314397065410590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1595daa68e19c5b44a6668bb9bdbe698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTransform: {fileID: 4604338699581246}
 --- !u!1 &7045534251571231851
 GameObject:
   m_ObjectHideFlags: 0

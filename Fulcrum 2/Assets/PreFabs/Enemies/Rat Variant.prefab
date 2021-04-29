@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  player: {fileID: 5550682717542113403}
 --- !u!114 &2036408345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +129,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4730061564821137385}
-  player: {fileID: 0}
+--- !u!114 &6296286119676873471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728821944618828607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1595daa68e19c5b44a6668bb9bdbe698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTransform: {fileID: 4734644892744256543}
+  myCameraTransform: {fileID: 0}
 --- !u!1001 &4730061566236343073
 PrefabInstance:
   m_ObjectHideFlags: 0
