@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1653295501}
+  GameManagerNew: {fileID: 0}
 --- !u!1 &1827206381705844
 GameObject:
   m_ObjectHideFlags: 0

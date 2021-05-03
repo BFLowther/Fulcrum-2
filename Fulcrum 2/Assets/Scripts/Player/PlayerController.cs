@@ -81,21 +81,15 @@ public class PlayerController : MonoBehaviour
         Vector3 moveVector = new Vector3(horizontal, 0, vertical);
         moveVector = moveVector.normalized * speed * (run ? runMultiplier : 1);
 
-        anim.SetFloat("vertical", moveVector.z);
-        anim.SetFloat("horizontal", moveVector.x);
-
         Vector3 targetPos = transform.position + moveVector;
 
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime);
 
-        if (horizontal > 0)
-        {
-            _spriteRenderer.flipX = false;
-        }
-        else if (horizontal < 0)
-        {
-            _spriteRenderer.flipX = true;
-        }
+        float move = Input.GetAxis("Vertical");//sets move to Verticals value
+        anim.SetFloat("ForwardSpeed", move); //sets ForwardSpeed to move's value
+
+        float sideMove = Input.GetAxis("Horizontal");
+        anim.SetFloat("SideSpeed", sideMove);
     }
 
     void TakeAShot()
