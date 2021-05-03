@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Character_UI_Test_Darrel/NewUIScene.unity
+    path: Assets/_Scenes/Builds/NewUIScene.unity
     guid: 0da03a97947b83f4faa3f3697a785d1e
   - enabled: 1
     path: Assets/_Scenes/Builds/Game.unity
